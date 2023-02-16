@@ -4,4 +4,10 @@ rm -rf student-submission
 git clone $1 student-submission
 echo 'Finished cloning'
 
-cd student-submission
+if[-f student-submission/ListExamples.java]
+then
+    echo "File Exists"
+else
+    echo "Files Does Not Exist"
+    exit
+fi
